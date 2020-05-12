@@ -1,0 +1,180 @@
+/* pages/shopCar/shopCar.wxss */
+.empty{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 200rpx
+}
+.shopCar {
+}
+.boxs{
+  margin-bottom: 120rpx;
+}
+.carBox {
+  margin-top: 16rpx;
+  padding: 40rpx;
+  background: #fff;
+  display: flex;
+  height: 180rpx;
+  position: relative;
+  left: 0rpx;
+  transition: all 0.3s;
+}
+
+.carLeft {
+  width: 20rpx;
+  height: 20rpx;
+  border: 1px solid rgba(187, 187, 187, 1);
+  border-radius: 6px;
+  padding: 6rpx;
+  position: relative;
+  top: 74rpx;
+}
+.carLefts{
+  background: #333
+}
+
+.carLeft .left_img {
+  width: 20rpx;
+  height: 20rpx;
+  display: block
+}
+
+.carRight {
+  width: 592rpx;
+  height: 180rpx;
+  margin-left: 30rpx;
+  display: flex;
+}
+
+.carRight image {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10px;
+}
+
+.right_box {
+  width: 388rpx;
+  margin-left: 30rpx;
+}
+
+.right_box .title {
+  width: 388rpx;
+  height: 76rpx;
+  font-size: 28rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 38rpx;
+}
+
+.orderData {
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #e04545;
+}
+
+.orderData .data_right {
+  width: 176rpx;
+  height: 48rpx;
+  display: flex;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.button {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.orderData .data_right .num {
+  width: 80rpx;
+  height: 48rpx;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.butBox {
+  width: 100%;
+  height: 98rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(238, 238, 238, 1);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0
+}
+
+.butBox_left{
+  display: flex;
+  line-height: 98rpx;
+  padding-left: 40rpx;
+}
+.butBox_left .leftImg{
+  position: relative;
+  top: 33rpx;
+}
+.butBox_left .left_text{
+  display: block;
+  font-size: 28rpx;
+  margin-left: 21rpx
+}
+.butBox_right{
+  display: flex;
+  justify-content: space-between;
+  width: 459rpx;
+  /* padding-right: 40rpx; */
+}
+.butBox_right .right_money{
+  font-size: 28rpx;
+  line-height: 98rpx;
+  color: #999
+}
+.butBox_right .right_money .moneyBox{
+  font-size: 32rpx;
+  color: #e04545;
+  padding-left: 20rpx;
+}
+.purchase{
+  width: 200rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background: #333;
+  text-align: center
+}
+
+.fuRight{
+  width: 120rpx;
+  height: 260rpx;
+  text-align: center;
+  line-height: 260rpx;
+  font-size: 26rpx;
+  background: #EF4444;
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  right: -120rpx;
+  transition: all 0.3s;
+}
+.active .carBox {
+  left: -120rpx;
+}
+
+.active .fuRight {
+  right: 0;
+}

@@ -1,0 +1,42 @@
+<view class="shopCar">
+  <view class="boxs" wx:if="{{list.length>0}}">
+    <view wx:for="{{list}}" wx:key="index" data-index='{{index}}' class="{{item.delect? 'active' :''}}" bindtouchstart="touchS" bindtouchmove="touchM" style="position: relative" data-id="{{item.id}}" bindtap="goodDetails">
+      <view class="carBox">
+        <view class="carLeft {{item.status?'carLefts':''}}" data-index='{{index}}' catchtap="select">
+          <image class="left_img" wx:if="{{item.status}}" src="../../static/images/select.png"></image>
+        </view>
+        <view class="carRight">
+          <image src="{{item.logo}}"></image>
+          <view class="right_box">
+            <view class="title">{{item.title}}</view>
+            <view class="orderData">
+              <text>￥{{item.price}}</text>
+              <view class="data_right">
+                <view class="button" data-index="{{index}}" catchtap="subtract">-</view>
+                <view class="num">{{item.num}}</view>
+                <view class="button" data-index="{{index}}" catchtap="addNum">+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="fuRight" data-index='{{index}}' catchtap="remove">删除</view>
+    </view>
+  </view>
+  <view class="empty" wx:else>暂无数据</view>
+  <view class="butBox" wx:if="{{list.length>0}}">
+    <view class="butBox_left" bindtap="selectAll">
+      <view class="carLeft leftImg {{status?'carLefts':''}}">
+        <image class="left_img" wx:if="{{status}}" src="../../static/images/select.png"> </image>
+      </view>
+      <text class="left_text">全选</text>
+    </view>
+    <view class="butBox_right">
+      <view class="right_money">
+        <text>总计</text>
+        <text class="moneyBox">￥{{money}}</text>
+      </view>
+      <view class="purchase" bindtap="car_details">立即购买</view>
+    </view>
+  </view>
+</view>

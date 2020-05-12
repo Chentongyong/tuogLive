@@ -1,0 +1,40 @@
+<view class="goodDetails">
+    <!-- 轮播图 -->
+    <view class="goodTop">
+        <swiper class="swiper" autoplay="true" interval="3000" duration="500" circular="true" bindchange='onIndex'>
+            <block wx:for="{{listImg}}" wx:key="index">
+                <swiper-item class="swiper-item">
+                    <image src="{{item}}" mode="aspectFill" lazy-load="true"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="indexLb">{{index}}/{{listImg.length}}</view>
+    </view>
+    <!-- 轮播图 -->
+    <!-- 商品信息 -->
+    <view class="message">
+        <view class="money">
+            <text class="moneyLeft">￥</text>
+            <text>{{datas.sell_price}}</text>
+            <text class="moneyRight">￥{{datas.price}}</text>
+        </view>
+        <view class="moneyTitle">{{datas.title}}</view>
+        <view class="explain">{{datas.mini_title}}</view>
+    </view>
+    <!-- 商品信息end -->
+    <!-- 富文本 -->
+    <view class="rich_text" style="text-algin:center">
+        <parser html="{{html}}" />
+    </view>
+    <!-- 富文本end -->
+    <view class="sume">
+        <view class="tabBar">
+            <view class="tabBar_left">
+                <image src="../../static/images/transmit.png"></image>
+                <text class="left_text">转发</text>
+                <button open-type='share'></button>
+            </view>
+            <view class="tabBar_button" bindtap="robBuy">立即抢购</view>
+        </view>
+    </view>
+</view>

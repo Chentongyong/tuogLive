@@ -1,0 +1,182 @@
+.banner {
+  width: 100%;
+  height: 400rpx;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-cell {
+  width: 650rpx;
+  height: 460rpx;
+  text-align: center
+}
+
+.swiper image {
+  /* width: 100%;
+  height: 100%; */
+  width: 630rpx;
+  height: 400rpx;
+  border-radius: 5px;
+  /* box-shadow: 0px 10px 15px #333; */
+}
+
+
+.play {
+  padding: 0 38rpx;
+}
+
+.playBox {
+  align-items: center;
+  height: 50rpx;
+  margin-bottom: 54rpx;
+  margin-top: 61rpx;
+}
+
+.playBox .jtImg {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.playBox .playText {
+  font-size: 32rpx;
+  position: relative;
+  left: 10rpx;
+}
+
+.playList {
+  background: #fff;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 38rpx;
+  width: 670rpx;
+}
+
+.playList_img {
+  width: 670rpx;
+  height: 376rpx;
+  border-radius: 5px;
+}
+
+.playList_box {
+  padding: 40rpx 30rpx 39rpx 30rpx;
+  font-size: 24rpx;
+  color: #999;
+  position: relative;
+}
+
+.playList_box .title {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 18rpx;
+}
+
+.underway {
+  width: 260rpx;
+  height: 46rpx;
+  display: flex;
+  line-height: 46rpx;
+  position: absolute;
+  top: 24rpx;
+  left: 30rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.underway .undLeft {
+  width: 50%;
+  background: #e85d5d;
+  border-radius: 23px 0px 0px 23px;
+}
+
+.leftImg {
+  width: 22rpx;
+  height: 22rpx;
+  margin-right: 10rpx;
+  position: relative;
+  top: 2rpx;
+}
+
+.underway .undRight {
+  width: 50%;
+  background: #000;
+  opacity: 0.3;
+  border-radius: 0px 23px 23px 0px;
+}
+
+.undTime {
+  width: 100%;
+  height: 100%;
+  line-height: 46rpx;
+  border-radius: 23px;
+  background: #c4c4c4;
+}
+
+.subscription {
+  width: 72rpx;
+  height: 120rpx;
+  text-align: center;
+  color: #e85d5d;
+  position: absolute;
+  right: 30rpx;
+  bottom: 86rpx;
+}
+
+.subscription .subImg {
+  width: 72rpx;
+  height: 72rpx;
+  text-align: 72rpx;
+  background: #e85d5d;
+  border-radius: 50%;
+  margin-bottom: 8rpx;
+}
+
+.subscription .subImg image {
+  width: 38rpx;
+  height: 38rpx;
+  margin-top: 17rpx;
+}
+
+.shopping {
+  width: 180rpx;
+  position: fixed;
+  bottom: 322rpx;
+  right: 0rpx;
+}
+
+.shopBox {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+  background: #fff;
+  box-shadow: 3px 5px 30px 0px rgba(49, 46, 70, 0.06);
+  border-radius: 36px 0px 0px 36px;
+  font-size: 26rpx
+}
+
+.shopping image {
+  width: 32rpx;
+  height: 32rpx;
+  display: block;
+  margin-top: 16rpx;
+}
+
+.shopBox .boxSum {
+  display: none;
+}
+/* .shopBox .shopBox_text{
+  dis
+} */
+.subscription .subImg.dy_take{
+  background: #C4C4C4
+}
+.dy_style{
+  color: #999999
+}

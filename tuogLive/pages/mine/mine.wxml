@@ -1,0 +1,57 @@
+<view class="mine">
+  <view class="mintTop">
+    <view class="mineTop_box">
+      <image src="{{userInfo.headimg}}" mode="aspectFill" lazy-load="true"></image>
+      <view class="box_right">
+        <view class="box_right_title">{{userInfo.nickname}}</view>
+        <text>{{userInfo.phone}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="mine_list_box">
+    <view class="list_box_top">
+      <view class="bot_top_title"  data-type='' bindtap="order">
+        <text class="title_text">我的订单</text>
+        <image class="title_img" src="../../static/images/ji_right.png"></image>
+      </view>
+      <view class="typeBox">
+        <view class="mine_list_tyle" data-type='1' bindtap="order">
+          <image src="../../static/images/mine_logo2.png"></image>
+          <text>待付款</text>
+        </view>
+        <view class="mine_list_tyle" data-type='2' bindtap="order">
+          <image src="../../static/images/mine_logo3.png"></image>
+          <text>待发货</text>
+        </view>
+        <view class="mine_list_tyle" data-type='3' bindtap="order">
+          <image src="../../static/images/mine_logo4.png"></image>
+          <text>待收货</text>
+        </view>
+        <view class="mine_list_tyle" data-type='4' bindtap="order">
+          <image src="../../static/images/mine_logo5.png"></image>
+          <text>已完成</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="list_box_but">
+      <view class="butBox" style="margin-bottom:40rpx;"  bindtap="address">
+        <view>
+          <image class="leftImg" src="../../static/images/mine_site.png"></image>
+          <text class="">地址管理</text>
+        </view>
+        <image class="title_img" src="../../static/images/ji_right.png"></image>
+      </view>
+      <view class="butBox">
+        <view class="">
+          <image class="leftImg" src="../../static/images/mine_phone.png"></image>
+          <text class="">联系客服</text>
+        </view>
+        <image class="title_img" src="../../static/images/ji_right.png"></image>
+        <button open-type='contact' session-from='' class="buttonBox"></button>
+      </view>
+
+    </view>
+  </view>
+</view>

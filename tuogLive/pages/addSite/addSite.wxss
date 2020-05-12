@@ -1,0 +1,52 @@
+.addSite{
+  padding: 0 40rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.addBox{
+  display: flex;
+  justify-content: space-between;
+  line-height: 106rpx;
+  border-top: 1px solid #eee;
+  font-size: 28rpx;
+}
+
+.addBox_left{
+  width: 170rpx;
+  color: #333;
+}
+.box,
+input{
+  flex: 1;
+  height: 106rpx;
+  line-height: 106rpx;
+  outline: none;
+  overflow: hidden;
+}
+
+
+image{
+  width: 20rpx;
+  height: 20rpx;
+  position: relative;
+  top: 43rpx;
+}
+
+.addAddress {
+  width: 100%;
+  background: #fff;
+  padding: 16rpx 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.addAddress button {
+  width: 670rpx;
+  height: 80rpx;
+  color: #fff;
+  background: #333;
+  font-size: 26rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+}

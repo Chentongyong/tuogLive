@@ -1,0 +1,62 @@
+<!-- index.wxml -->
+<view class="container">
+    <!-- 轮播图 -->
+    <view class="banner" wx:if="{{banner.length > 0}}">
+        <swiper class="swiper" autoplay="true" interval="5000" duration="500" circular="true" previous-margin="25px" next-margin="20px">
+            <block wx:for="{{banner}}" wx:key="index">
+                <swiper-item class="swiper-item">
+                    <navigator class="banner-cell" url="../goodDetails/goodDetails?id={{item.good_id}}" hover-class="noHover" open-type="navigate" data-id="{{item.good_id}}">
+                        <image src="{{item.img_url}}" mode="aspectFill" lazy-load="true"></image>
+                    </navigator>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 轮播图end -->
+    <view class="play" wx:if="{{list.length > 0}}">
+        <view class="playBox">
+            <image class="jtImg" src="../../static/images/index_l.png" lazy-load="true"></image>
+            <text class="playText">直播</text>
+        </view>
+        <view class="playList" wx:for="{{list}}" wx:key="index" data-id='{{item.roomid}}' bindtap="toTow">
+            <image class="playList_img" src="{{item.cover_img}}" mode="aspectFill" lazy-load="true"></image>
+            <view class="underway" wx:if="{{item.live_status==101}}">
+                <view class="undLeft">
+                    <image class="leftImg" src="../../static/images/index_logo4.png" lazy-load="true"></image>
+                    <text>直播中</text>
+                </view>
+                <view class="undRight">666观看</view>
+            </view>
+            <view class="underway" wx:if="{{item.live_status==102}}">
+                <view class="undTime">
+                    <image class="leftImg" src="../../static/images/index_logo2.png" lazy-load="true"></image>
+                    <text>{{item.start_time.text}}开播</text>
+                </view>
+            </view>
+            <view class="underway" wx:if="{{item.live_status > 102}}">
+                <view class="undTime">
+                    <text>已经失效了</text>
+                </view>
+            </view>
+            <view class="playList_box">
+                <view class="title">{{item.name}}</view>
+                <text>{{item.anchor_name}}</text>
+                <view class="subscription" data-index='{{index}}' catchtap="subscription">
+                    <view class="subImg {{item.is_collect==1?'dy_take':''}}">
+                        <image src="../../static/images/index_logo3.png" lazy-load="true"></image>
+                    </view>
+                    <view wx:if="{{item.is_collect==1}}" class="{{item.is_collect==1?'dy_style':''}}">订阅</view>
+                    <view wx:else class="{{item.is_collect==1?'dy_style':''}}">已订阅</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- <subscribe room-id="[直播房间id]"></subscribe> 订阅组件 -->
+    <view class="shopping" wx:if="{{banner.length > 0 || list.length > 0}}">
+        <view class="shopBox" bindtap="shopCar">
+            <image class="leftImg" src="../../static/images/index_logo5.png" lazy-load="true"></image>
+            <text class="shopBox_text">购物车</text>
+            <!-- <view class="boxSum">99</view> -->
+        </view>
+    </view>
+</view>

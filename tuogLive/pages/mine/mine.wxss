@@ -1,0 +1,141 @@
+/* pages/mine/mine.wxss */
+
+.mintTop {
+  padding: 0 40rpx;
+  background: #333;
+  height: 380rpx;
+}
+
+.mineTop_box {
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  padding: 58rpx 0;
+}
+
+.box_rightBox {
+  color: #fff;
+  font-size: 36rpx;
+  margin-left: 31rpx;
+  line-height: 40rpx;
+  margin-top: 50rpx;
+}
+
+.mineTop_box image {
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+}
+
+.box_right {
+  width: 500rpx;
+  margin-left: 37rpx;
+  margin-top: 20rpx;
+  color: #fff;
+}
+
+.box_right .box_right_title {
+  font-size: 36rpx;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  margin-bottom: 16rpx;
+}
+
+.box_right text {
+  opacity: 0.6;
+}
+
+.mine_list_box {
+  width: 670rpx;
+  position: relative;
+  top: -120rpx;
+  left: 50%;
+  margin-left: -335rpx;
+}
+
+.list_box_top {
+  background: #fff;
+  padding: 41rpx 24rpx 49rpx 31rpx;
+  border-radius: 10px;
+}
+
+.bot_top_title {
+  display: flex;
+  justify-content: space-between;
+  line-height: 40rpx;
+}
+
+.bot_top_title .title_text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.title_img {
+  width: 22rpx;
+  height: 22rpx;
+  padding: 10rpx;
+}
+
+.typeBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40rpx;
+}
+
+.mine_list_tyle {
+  width: 25%;
+  text-align: center;
+}
+
+.mine_list_tyle image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.mine_list_tyle text {
+  display: block;
+  width: 100%;
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.list_box_but {
+  background: #fff;
+  padding: 38rpx 30rpx;
+  border-radius: 10px;
+  margin-top: 30rpx;
+}
+
+.butBox {
+  display: flex;
+  justify-content: space-between;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #333;
+  position: relative;
+}
+
+.buttonBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.1;
+  background: #fff;
+  border: 0;
+  top: 0px;
+  left: 0px;
+}
+
+.butBox .leftImg {
+  width: 32rpx;
+  height: 32rpx;
+  position: relative;
+  top: 4rpx;
+  margin-right: 30rpx;
+}

@@ -1,0 +1,79 @@
+.shop{
+  padding-top: 36rpx;
+}
+.shopImg{
+  width: 670rpx;
+  height: 360rpx;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+.play {
+  width: 670rpx;
+  margin-top: 28rpx;
+  margin: 0 auto;
+}
+
+.playBox {
+  align-items: center;
+  height: 50rpx;
+  margin-top: 72rpx;
+  margin-bottom: 40rpx
+}
+
+.playBox .jtImg {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.playBox .playText {
+  font-size: 32rpx;
+  position: relative;
+  left: 10rpx;
+}
+
+.playList {
+  background: #fff;
+  position: relative;
+  margin-bottom: 38rpx;
+  padding: 20rpx;
+  border-radius: 5px;
+  padding-bottom: 24rpx;
+}
+
+.playList_img {
+  width: 100%;
+  height: 376rpx;
+  border-radius: 5px;
+}
+
+.playList_box {
+  font-size: 24rpx;
+  color: #999;
+  position: relative;
+}
+
+.playList_box .title {
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 38rpx;
+  margin-bottom: 29rpx
+}
+
+.shop_box{
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  color: #E04545
+}
+.shop_box_right{
+  width: 160rpx;
+  height: 60rpx;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  font-size: 26rpx;
+  border-radius: 5px
+}

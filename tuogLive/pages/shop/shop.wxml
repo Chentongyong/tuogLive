@@ -1,0 +1,19 @@
+<view class="shop">
+  <image class="shopImg" src="{{banner}}" mode="aspectFill" lazy-load="true"></image>
+  <view class="play">
+    <view class="playBox" wx:if="{{shopList.length > 0}}">
+      <image class="jtImg" src="../../static/images/index_l.png"></image>
+      <text class="playText">今日好物推荐</text>
+    </view>
+    <view class="playList" wx:for="{{shopList}}" wx:key="index" bindtap="goodDetails" data-id='{{item.id}}'>
+      <image class="playList_img" src="{{item.logo}}" mode="aspectFill" lazy-load="true"></image>
+      <view class="playList_box">
+        <view class="title">{{item.title}}</view>
+        <view class="shop_box">
+          <view><text style="font-size:20rpx">￥</text>{{item.price}}</view>
+          <view class="shop_box_right" data-id='{{item.id}}' catchtap="purchase">立即购买</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

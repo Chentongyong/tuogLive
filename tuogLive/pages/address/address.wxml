@@ -1,0 +1,31 @@
+<view>
+  <!-- 有地址 -->
+<view style="margin-bottom:120rpx">
+  <view class="address_box {{item.status? 'active' :''}}" wx:for="{{addressLists}}" wx:key="index" wx:if="{{noAddress}}" data-index='{{index}}'  bindtouchstart="touchS" bindtouchmove="touchM">
+    <view class="list_address" data-index="{{index}}" bind:tap="clickAddress">
+      <view class="info">
+        <view>{{item.name}}</view> 
+        <text class="phone">{{item.phone}}</text>
+      </view>
+      <view class="address">{{item.full_address}}</view>
+    </view>
+    <view class="bottom">
+      <view class="edit" data-id="{{item.id}}" catchtap='amend'>
+        <text>编辑</text>
+      </view>
+      <view class="delect" data-id="{{item.id}}" catchtap='deleteFun' data-addrIndex="{{index}}">
+        <text>删除</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="addAddress" bindtap='addSite'>
+  <button>新增地址</button>
+</view>
+
+<!-- 无地址 -->
+  <view class="noAddress" wx:if="{{!noAddress}}">
+    <view>暂无服务地址</view>
+  </view>
+</view>
+

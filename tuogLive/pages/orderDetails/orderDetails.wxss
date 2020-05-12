@@ -1,0 +1,156 @@
+
+.statusb{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100
+}
+.orderDetails{
+  height: 100%;
+  overflow: scroll
+}
+.header{
+  padding: 0 40rpx;
+  background: #333;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-between
+} 
+.header .headLeft{
+  margin-top: 50rpx;
+  font-size: 34rpx;
+  color: #fff;
+}
+.header .headText{
+  display: block;
+  font-size: 28rpx;
+  margin-top: 22rpx;
+}
+.header image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 50rpx;
+}
+
+/* 地址 */
+.address{
+  padding: 40rpx 30px;
+  background: #fff;
+  color: #333;
+}
+.address .title{
+  font-size: 34rpx;
+}
+.address .nameXx{
+  font-size: 28rpx;
+  margin: 40rpx 0 23rpx 0;
+}
+.address .text2{
+  padding-left: 23rpx;
+}
+.address .map{
+  color: #999;
+  font-size: 28rpx;
+}
+
+/* 订单信息 */
+.order {
+  background: #fff;
+  padding: 0 40rpx;
+  margin-top: 16rpx;
+}
+.orderTitle{
+  padding-top: 49rpx;
+}
+.order_top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  line-height: 98rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.order_top .topRight {
+  color: #e04545;
+}
+
+.order_center {
+  padding: 40rpx 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+
+.order_center .centerImg {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10px;
+}
+
+.order_center .centerRight {
+  margin-left: 24rpx;
+}
+
+.order_center .centerRight .title {
+  width: 446rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 50rpx;
+  font-size: 28rpx;
+}
+.order_center .centerRight .sum{
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 20rpx
+}
+.order_center .centerRight  .sum .sum_left{
+  color:#E04545
+}
+.order .titles{
+  margin-bottom: 39rpx;
+}
+.mar_bot{
+  margin-bottom: 200rpx;
+}
+.message{
+  font-size: 28rpx;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 39rpx;
+}
+.messLeft{
+  color: #999
+}
+
+.status{
+  height: 80rpx;
+  background: #fff;
+  padding: 16rpx 40rpx;
+}
+.statusBox{
+  display: flex;
+  flex-direction: row-reverse;
+  /* height: 80rpx;
+  overflow: hidden; */
+}
+.statusBox .boxZi{
+  width: 200rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border: 1px solid #D2D2D2;
+  border-radius: 5px;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+.statusBox .boxZi.ziSty{
+  background: #333;
+  color: #fff
+}

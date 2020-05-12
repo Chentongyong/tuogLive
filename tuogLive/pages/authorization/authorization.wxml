@@ -1,0 +1,24 @@
+<view class="authorization">
+  <view class="zuthBox" wx:if="{{hides}}">
+    <image class="img" src="../../static/images/tx_logo_03.png"></image>
+    <view class="title">四寸银庄匠人志 申请获得以下权限</view>
+    <view class="textBox">获得你的公开信息（昵称、头像、地区及性别）</view>
+    <view class="butBox">
+      <view bindtap="goSuperior">再想想</view>
+      <button class='box_right' type='' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+        同意授权
+      </button>
+    </view>
+  </view>
+  <view class="zuthBox" wx:else>
+    <image class="img" src="../../static/images/tx_logo_03.png"></image>
+    <view class="title">四寸银庄匠人志 申请获得以下权限</view>
+    <view class="textBox">获得你绑定微信的手机号码</view>
+    <view class="butBox">
+      <view bindtap="goSuperior">再想想</view>
+      <button class='box_right' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        微信手机号授权
+      </button>
+    </view>
+  </view>
+</view>

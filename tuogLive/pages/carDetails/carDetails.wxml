@@ -1,0 +1,59 @@
+<view class="carDetails">
+  <!-- 地址 -->
+  <view class="address" bindtap="address" wx:if="{{mapList!=''}}">
+    <view class="title">收货地址</view>
+    <view class="nameXx">
+      <text>{{mapList.name}}</text>
+      <text class="text2">{{mapList.phone}}</text>
+    </view>
+    <view class="map">{{mapList.full_address}}</view>
+  </view>
+  <view class="address" bindtap="address" wx:if="{{mapList==''}}">
+    <view class="title">请填写您的收货地址</view>
+    <view>
+      <view class="nameXx map">添加地址</view>
+    </view>
+    <image class="addressImg" src="../../static/images/ji_right.png"></image>
+  </view>
+  <!-- 地址end -->
+
+  <!-- 商品信息 -->
+  <view class="order">
+    <view wx:for="{{list}}" :key="index">
+      <view class="orderTitle">商品信息</view>
+      <view class="order_center">
+        <image class="centerImg" src="{{item.logo}}" mode="aspectFill" lazy-load="true"></image>
+        <view class="centerRight">
+          <view class="title">{{item.title}}</view>
+          <view class="sum">
+            <text class="sum_left">￥{{item.price}}</text>
+            <view class="number">
+              <view class="numRight">
+                <view class="button" data-index="{{index}}" bindtap="subtract">-</view>
+                <view class="num">{{item.num}}</view>
+                <view class="button" data-index="{{index}}" bindtap="addNum">+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 商品信息end -->
+
+
+  <view class="number numberDs">
+    <view class="remark">订单备注</view>
+    <input placeholder="请输入备注" placeholder-style="color:#bbb" bindinput="desc"></input>
+  </view>
+
+  <view class="tabBar">
+    <view class="tabBar_left">
+      <view class="left_box">
+        <text>共计{{num}}件，</text> 合计
+        <text class="left_box_money">￥{{money}}</text>
+      </view>
+    </view>
+    <view class="tabBar_right" bindtap="button">提交订单</view>
+  </view>
+</view>

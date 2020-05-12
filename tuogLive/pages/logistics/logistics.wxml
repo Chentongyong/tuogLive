@@ -1,0 +1,25 @@
+<view class="logistics">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="headLeft">
+      <view>{{datas.company}}</view>
+      <text class="headText">订单编号：{{datas.number}}</text>
+    </view>
+    <view>
+      <image src="../../static/images/orderdetails5.png"></image>
+    </view>
+  </view>
+  <!-- 头部end -->
+
+  <view class="logisticsBox">
+    <view wx:for="{{datas.data.data}}" wx:key="index" class="listBox">
+      <view class="bigCircle {{state==index?'bigBack':''}}">
+        <view class="littleCircle {{state==index?'little':''}}"></view>
+      </view>
+      <view class="listBox_right">
+        <view class="right_text {{state==index?'rig_titles':''}}">{{item.context}}</view>
+        <view class="right_time">{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+</view>

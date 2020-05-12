@@ -1,0 +1,91 @@
+<view class="orderDetails">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="headLeft">
+      <view wx:if="{{datas.status==-1}}">订单已取消</view>
+      <view wx:else>{{typeList[datas.status]}}</view>
+      <text class="headText" wx:if="{{datas.status==1}}">订单合计金额￥{{datas.total_price}}</text>
+    </view>
+    <view>
+      <image src="../../static/images/orderdetails1.png" wx:if='{{datas.status==1}}'></image>
+      <image src="../../static/images/orderdetails2.png" wx:if='{{datas.status==2}}'></image>
+      <image src="../../static/images/orderdetails3.png" wx:if='{{datas.status==3}}'></image>
+      <image src="../../static/images/orderdetails4.png" wx:if='{{datas.status==4}}'></image>
+      <image src="../../static/images/orderdetails5.png" wx:if='{{datas.status==5}}'></image>
+    </view>
+  </view>
+  <!-- 头部end -->
+
+  <!-- 地址 -->
+  <!-- <view class="address" bindtap="address"> -->
+  <view class="address">
+    <view class="title">收货地址</view> 
+    <view class="nameXx">
+      <text>{{datas.name}}</text>
+      <text class="text2">{{datas.phone}}</text>
+    </view>
+    <view class="map">{{datas.full_address}}</view>
+  </view>
+  <!-- 地址end -->
+ 
+  <!-- 商品信息 -->
+  <view class="order">
+    <view class="orderTitle">商品信息</view>
+    <!-- <view class="order"> -->
+    <!-- <view class="order_top">
+        <view>订单号：123456789</view>
+        <text class="topRight">{{menuList[currentTab].name}}</text>
+      </view> -->
+    <view class="order_center">
+      <image class="centerImg" src="{{datas.goods[0].logo}}" mode="aspectFill" lazy-load="true"></image>
+      <view class="centerRight">
+        <view class="title">{{datas.goods[0].title}}</view>
+        <view class="sum">
+          <text class="sum_left">￥{{datas.goods[0].price}}</text>
+          <text>X{{datas.goods[0].num}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 商品信息end -->
+
+  <!-- 订单信息 -->
+  <view class="order mar_bot">
+    <view class="orderTitle titles">商品信息</view>
+    <view class="message">
+      <text class="messLeft">订单号</text>
+      <text>{{datas.order_no}}</text>
+    </view>
+    <view class="message">
+      <text class="messLeft">下单时间</text>
+      <text>{{datas.create_at}}</text>
+    </view>
+    <view class="message">
+      <text class="messLeft">运费</text>
+      <text>￥{{datas.freight_price}}</text>
+    </view>
+    <view class="message">
+      <text class="messLeft">合计</text>
+      <text>￥{{datas.pay_price}}</text>
+    </view>
+  </view>
+  <!-- 订单信息end -->
+ <view class="statusb">
+  <view class="status">
+    <view wx:if="{{datas.status==1}}" class="statusBox">
+      <view class="boxZi ziSty" data-id='{{datas.id}}' bindtap="pay">付款</view>
+      <view class="boxZi" bindtap="cancel">取消订单</view>
+    </view>
+    <view wx:if="{{datas.status==2}}" class="statusBox" data-id='{{datas.id}}'>
+      <view class="boxZi ziSty" bindtap="remind">提醒发货</view>
+    </view>
+    <view wx:if="{{datas.status==3}}" class="statusBox" data-id='{{datas.id}}'>
+      <view class="boxZi ziSty" bindtap="collect_order">确认收货</view>
+      <view class="boxZi" bindtap="logistics" data-id='{{datas.express_id}}'>查看物流</view>
+    </view>
+    <view wx:if="{{datas.status==4}}" class="statusBox" bindtap="deletes">
+      <view class="boxZi">删除订单</view>
+    </view>
+  </view>
+ </view>
+</view>

@@ -1,0 +1,108 @@
+.goodDetails{
+  /* height: 100%;
+  overflow: scroll */
+  margin-bottom: 140rpx
+}
+.goodTop {
+  width: 100%;
+  height: 750rpx;
+  position: relative
+}
+
+.swiper {
+  width: 750rpx;
+  height: 750rpx;
+}
+.swiper image {
+  width: 100%;
+  height: 750rpx;
+}
+.indexLb{
+  width: 100rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 26rpx;
+  color: #fff;
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+}
+
+/* 商品信息 */
+.message{
+  padding: 49rpx 40rpx;
+  background: #fff;
+}
+.message .money{
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #E04545
+}
+.message .money .moneyLeft{
+  font-size: 22rpx
+}
+.message .money .moneyRight{
+  font-size: 22rpx;
+  text-decoration: line-through;
+  color: #bbb;
+  padding-left: 19rpx;
+  font-weight: 400
+}
+.moneyTitle{
+  font-size: 32rpx;
+  color: #333;
+  padding: 40rpx 0 23rpx 0
+}
+.explain{
+  font-size: 24rpx;
+  color: #999
+}
+
+/* 富文本 */
+.rich_text{
+  width: 100%;
+  margin-top: 16rpx;
+}
+/* 富文本end */
+
+
+.tabBar{
+  padding: 16rpx 40rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between
+}
+.tabBar_button{
+  width: 585rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: #333;
+  font-size: 28rpx;
+  color: #fff;
+  border-radius: 5px
+}
+.tabBar_left{
+  width: 50rpx;
+  text-align: center;
+  position: relative;
+}
+.tabBar_left button{
+  width: 100%;
+  height: 80rpx;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.1;
+  z-index: 99;
+}
+.tabBar_left image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.tabBar_left .left_text{
+  display: block;
+  font-size: 24rpx;
+  color: #333;
+}

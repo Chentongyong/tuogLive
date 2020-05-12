@@ -1,0 +1,53 @@
+<view class="contain">
+    <scroll-view class="tab" scroll-x scroll-left="{{tabScroll}}" scroll-with-animation="true">
+        <block wx:for="{{menuList}}" wx:key="index">
+            <view class="tab-item {{currentTab == index ? 'active' : ''}}" data-current="{{index}}" bindtap='clickMenu'>
+                <view>{{item.name}}</view>
+                <view class="{{currentTab == index ? 'tab-item-but' : ''}}"></view>
+            </view>
+        </block>
+    </scroll-view>
+    <!-- 页面 -->
+    <swiper class="content" style='height: {{windowHeight}}px' duration="500" current="{{currentTab}}" bindchange="changeContent">
+        <swiper-item class="content-item" wx:for="{{menuList}}" wx:for-index="vo" wx:key="index">
+            <scroll-view scroll-y="true" bindscrolltolower="scrollend" style='height:100%'>
+                <view class="orderBox" wx:if="{{currentTab == vo}}">
+                    <view class="order" wx:for="{{order}}" wx:key='index' wx:if="{{order!=''}}">
+                        <view class="order_top">
+                            <view>订单号：{{item.order_no}}</view>
+                            <text class="topRight">{{item.status_text}}</text>
+                            <!-- <text class="topRight" wx:if="{{item.status==1}}">待付款</text>
+                            <text class="topRight" wx:if="{{item.status==2}}">待发货</text>
+                            <text class="topRight" wx:if="{{item.status==3}}">待收货</text>
+                            <text class="topRight" wx:if="{{item.status==5}}">已完成</text>
+                            <text class="topRight" wx:if="{{item.status==4}}">待评价</text>
+                            <text class="topRight" wx:if="{{item.status==6}}">已退货及退款</text> -->
+                        </view>
+                        <view class="order_center" bindtap="orderDetails" data-id="{{item.id}}">
+                            <image class="centerImg" src="{{item.goods[0].logo}}" mode="aspectFill" lazy-load="true"></image>
+                            <view class="centerRight">
+                                <view class="title">{{item.goods[0].title}}</view>
+                                <view class="sum">
+                                    <text class="sum_left">￥{{item.goods[0].price}}</text>
+                                    <text>X{{item.goods[0].num}}</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="order_but" wx:if="{{item.status==1}}">
+                            <view class="but_left">
+                                <text>共1件</text>
+                                ,
+                                <text>合计￥{{item.total_price}}</text>
+                            </view>
+                            <view class="but_right" catchtap="shopCar" data-id='{{item.id}}'>
+                                付款
+                            </view>
+                        </view>
+                    </view>
+                    <view class="empty" wx:if="{{order==''}}">暂无数据</view>
+                </view>
+                <view class="no_more" wx:if="{{order.length > 0 && !to_load}}">没有更多信息了</view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

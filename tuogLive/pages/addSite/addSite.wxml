@@ -1,0 +1,31 @@
+<view>
+  <view class="addSite">
+    <view class="addBox" style="border-top:0">
+      <text class="addBox_left">收货人</text>
+      <input placeholder="请输入收货人" bindinput="name" placeholder-style="color:#bbb" value="{{name}}"></input>
+    </view>
+    <view class="addBox">
+      <text class="addBox_left">联系方式</text>
+      <input placeholder="请输入联系方式" placeholder-style="color:#bbb" bindinput="phone" value="{{phone}}"></input>
+    </view>
+    <view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" name="area">
+        <view class="addBox">
+          <view class="addBox_left">收货地址</view>
+          <view class="box">
+            <view class="ipt" wx:if="{{region!=''}}">{{region}}</view>
+          </view>
+          <image src="../../static/images/ji_right.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="addBox">
+      <text class="addBox_left">详细地址</text>
+      <input placeholder="请输入详细地址" placeholder-style="color:#bbb" bindinput="mapDetail" value="{{mapDetail}}"></input>
+    </view>
+  </view>
+
+  <view class="addAddress" bindtap='addSite'>
+    <button bindtap="conserve">保存</button>
+  </view>
+</view>

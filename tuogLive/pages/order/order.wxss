@@ -1,0 +1,157 @@
+.contain {
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+}
+.empty{
+  width: 100%;
+  text-align: center;
+  margin-top:120rpx;
+}
+.tab {
+  width: 100%;
+  height: 72rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 1px 2px rgba(204, 204, 204, 0.5);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-item {
+  display: inline-block;
+  width: 20%;
+  line-height: 72rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #BBB;
+  position: relative
+}
+
+.active {
+  color: #333;
+}
+.tab-item-but{
+  width: 50rpx;
+  height: 6rpx;
+  background: #333;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -25rpx;
+}
+.content {
+  padding-top: 100rpx;
+  font-size: 14px;
+  height: 100%;
+}
+
+.content .content-item {
+  overflow-y: scroll;
+}
+
+.content {
+  box-sizing: border-box;
+  padding-top: 100rpx;
+  font-size: 14px;
+  height: 100%;
+}
+
+.content .content-item {
+  overflow-y: scroll;
+}
+
+.orderBox {
+  padding: 16rpx 0;
+}
+
+.order {
+  background: #fff;
+  margin-bottom: 16rpx;
+  padding: 0 40rpx;
+}
+
+.order_top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  line-height: 98rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.order_top .topRight {
+  color: #e04545;
+}
+
+.order_center {
+  padding: 40rpx 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+
+.order_center .centerImg {
+  margin-right: 24rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10px;
+}
+
+.order_center .centerRight {
+  flex: 1;
+  overflow: hidden;
+}
+
+.order_center .centerRight .title {
+  width: 446rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 50rpx;
+}
+.order_center .centerRight .sum{
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 20rpx
+}
+.order_center .centerRight  .sum .sum_left{
+  color:#E04545
+}
+.order_but{
+  display: flex;
+  justify-content: space-between;
+  padding: 26rpx 0;
+  line-height: 56rpx;
+}
+.order_but .but_left{
+  height: 56rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.order_but .but_right{
+  width: 148rpx;
+  height: 56rpx;
+  background: #333;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  border-radius: 5px
+}
+.no_more{
+  font-size: 24rpx;
+  text-align: center;
+  color: #999999;
+  margin: 20rpx 0
+}
